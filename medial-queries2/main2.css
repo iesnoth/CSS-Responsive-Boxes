@@ -1,36 +1,38 @@
+
 * {
-  border: 2px solid hotpink;
+  border: 2px solid rgb(183, 227, 210);
 }
 
 body {
-  background: rgb(89, 15, 63);
+  background: rgb(53, 67, 78);
   margin: 0;
   text-align: center;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-wrap:wrap;
+  flex-direction: row;
   justify-content: space-around;
   min-height: 100vh;
 }
 
+.a, .f{
+  width:98%;
+  min-height:19%;
+}
 
 .b {
-  min-height: 59vh;
-  flex-grow: 5;
-  margin: 1vh;
+  width:98%;
+  min-height: 49%;
 }
 
-.a,
-.c {
-  min-height: 19vh;
-  flex-grow: 2;
-  margin: 1vh;
+.c,.d,.e {
+  width:32%;
+  min-height: 19%;
 }
 
-
-@media(min-width: 600px) {
+/* @media(min-width: 600px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -47,4 +49,4 @@ body {
   .c {
     max-width: 20%;
   }
-}
+} */
