@@ -1,4 +1,4 @@
-/* .container > *{
+.container>* {
   border: 2px solid rgb(183, 227, 210);
 }
 
@@ -11,7 +11,6 @@ body {
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-evenly;
   height: 100vh;
   border: 2px solid hotpink;
@@ -20,13 +19,24 @@ body {
 .a,
 .f {
   width: 98%;
-  min-height: 10%;
+  min-height: 20%;
 
+}
+
+.stupid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60%;
+  width: 98%;
+}
+
+.stupid>* {
+  border: 2px solid yellow;
 }
 
 .b {
   width: 98%;
-  min-height: 30%;
+  min-height: 60%;
 
 }
 
@@ -34,59 +44,50 @@ body {
 .d,
 .e {
   width: 32%;
-  min-height: 10%;
-} */
+  min-height: 30%;
+}
 
 @media(min-width: 600px) {
 
-.container > *{
-  border: 2px solid rgb(183, 227, 210);
+  .container>* {
+    border: 2px solid rgb(183, 227, 210);
+  }
+
+  body {
+    background: rgb(53, 67, 78);
+    margin: 0;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+    border: 2px solid hotpink;
+  }
+
+  .a {
+    width: 98%;
+    height: 30%;
+  }
+
+  .stupid {
+    height: 60%;
+    width: 75%;
+  }
+
+  .f {
+    width: 20%;
+    height: 60%;
+    order: 3;
+    flex-direction: column;
+  }
 }
 
-body {
-  background: rgb(53, 67, 78);
-  margin: 0;
-  text-align: center;
-}
+/* FIRST ATTEMPT */
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  height: 100vh;
-  border: 2px solid hotpink;
-}
-
-.a
- {
-  width: 98%;
-  height: 30%;
-
-}
-
-.b {
-  width: 70%;
-  height: 30%;
-
-}
-
-.c,
-.d,
-.e {
-  align-self: flex-start;
-  width: 20%;
-  height: 30%;
-}
-
-.f{
-  width:20%;
-  height:60%;
-  /* flex-direction: column;
-  align-self:flex-end; */
-}
-
-
-  /* .container {
+/* .container {
    
     justify-content: space-evenly;
   }
@@ -116,4 +117,3 @@ body {
     max-width: 23%;
     height: 60%;
   } */
-}
